@@ -13,13 +13,14 @@ import { Router } from '@angular/router';
 export class OrdersComponent implements OnInit {
   orders: Order[] = [];
   displayedColumns: string[] = ['id', 'currency', 'number', 'note', 'name', 'shippingMethod', 'taxesIncluded', 'actions'];
-  
+  flag:boolean = false;
   dataSource = new MatTableDataSource<Order>(this.ordersService.orders);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(public ordersService: OrdersService, private router: Router) {
     this.ordersService.getOrders().subscribe((data : any) =>{
+      this.flag = true;
       console.log(data);
       this.ordersService.orders = data.orders;
       this.ordersService.saveDataLocal();
