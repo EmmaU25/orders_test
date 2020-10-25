@@ -1,0 +1,79 @@
+table {
+    width: 100%;
+  }
+
+
+
+  @media screen and (max-width: 600px) {
+    
+  
+
+    .mat-row{
+        min-height: 191px;
+    }
+
+    .mat-header-row{
+      height: 191px;
+      /* text-align: center; */
+      background: #009688;
+    }
+
+    .mat-header-cell{
+      display: block;
+      text-align: center;
+      color: white;
+      padding: 0!important;
+    }
+    button{
+        margin-top: 3px;
+    }
+
+    table{
+        border: 0;
+
+        thead {
+          display: none;
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+          }
+
+
+        tr {
+            border-bottom: 3px solid #ddd;
+            display: block;
+            margin-bottom: .625em;
+          }
+
+
+        td {
+            border-bottom: 1px solid #ddd;
+            display: block;
+            font-size: .8em;
+            text-align: center;
+          }
+
+        td::before {
+    
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+        }
+
+        td:last-child {
+            border-bottom: 0;
+            padding-right: 0;
+        }
+
+        caption {
+        font-size: 1.3em;
+        }
+        
+    }
+  }
