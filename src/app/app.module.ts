@@ -22,6 +22,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { FooterComponent } from './components/footer/footer.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatDialogModule,
     MatToolbarModule,
     MatGridListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
